@@ -1,14 +1,15 @@
 import os
+import platform
 from file_formats import get_file_path
 
 username = os.getlogin()
-sysname = os.uname().sysname
+sysname = platform.system()
 
 if sysname == "Linux":
     src_path = f"/home/{username}/Downloads"
 elif sysname == "Windows":
     src_path = f"C:/Users/{username}/Downloads"
-elif sysname == "Mac":
+elif sysname == "Darwin":
     src_path = f"/Users/{username}/Downloads"
 
 src_path = input(f"Enter file path ({src_path}): ") or src_path
@@ -26,5 +27,5 @@ for file in files:
     src = src_path + "/" + file
     dest += file
     os.rename(src, dest)
-    
+
     print(f"{file} was successfully moved to {dest}.")
