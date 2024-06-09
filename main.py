@@ -5,7 +5,7 @@ from utils.file_operations import move_files
 
 logging.basicConfig(
     level=logging.INFO,
-    filename="logs/log.log",
+    filename="logs/movelogs.log",
     filemode="a",
     format="[%(asctime)s] - %(levelname)s - %(message)s",
 )

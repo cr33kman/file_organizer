@@ -1,9 +1,0 @@
-[2024-06-09 15:28:59] - plexus-digest-1.0.jar was moved to /home/benjamin/Downloads/plexus-digest-1.0.jar/Miscellaneous.
-[2024-06-09 15:28:59] - I1.java was moved to /home/benjamin/Downloads/I1.java/Code/Programming.
-[2024-06-09 15:28:59] - image-removebg-preview.png was moved to /home/benjamin/Downloads/image-removebg-preview.png/Images/Static.
-[2024-06-09 15:28:59] - Flask-Web-Development.pdf was moved to /home/benjamin/Downloads/Flask-Web-Development.pdf/Documents/PDFs.
-[2024-06-09 15:28:59] - Graph.java was moved to /home/benjamin/Downloads/Graph.java/Code/Programming.
-[2024-06-09 15:28:59] - Fluent Python.pdf was moved to /home/benjamin/Downloads/Fluent Python.pdf/Documents/PDFs.
-[2024-06-09 16:02:39] - image-removebg-preview.png was moved to /home/benjamin/Downloads/Images/Static.
-[2024-06-09 16:02:39] - Flask-Web-Development.pdf was moved to /home/benjamin/Downloads/Documents/PDFs.
-[2024-06-09 16:02:39] - Fluent Python.pdf was moved to /home/benjamin/Downloads/Documents/PDFs.
