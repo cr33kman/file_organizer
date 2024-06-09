@@ -15,9 +15,11 @@ logger = logging.getLogger(__name__)
 
 def main():
     sysname = platform.system()
+    src_path = input(f"Enter file path ({get_src(sysname)}): ") or get_src(sysname)
 
-    src_path = get_src(sysname)
-    src_path = input(f"Enter file path ({src_path}): ") or src_path
+    if not os.path.isdir(src_path):
+        logger.error(f"Invalid directory: {src_path}")
+        return
 
     move_files(src_path)
 

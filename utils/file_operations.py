@@ -1,4 +1,5 @@
 import os
+import shutil
 import logging
 from utils.path_handler import get_dest
 
@@ -22,7 +23,7 @@ def move_files(src_path):
             src = os.path.join(src_path, file)
             dest = os.path.join(dest_path, file)
 
-            os.rename(src, dest)  # Move the file
+            shutil.move(src, dest)
 
             logger.info(f"{file} was moved to {dest}.")
 
