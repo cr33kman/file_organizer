@@ -5,7 +5,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 try:
-    with open("utils/config.json", "r") as f:
+    with open("config/config.json", "r") as f:
         config = json.load(f)
 except FileNotFoundError:
     logger.error("config.json not found.")

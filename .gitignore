@@ -3,7 +3,7 @@ venv/
 .env
 
 # Python bytecode
-__pycache__
+__pycache__/
 *.py[cod]
 
 # Logs and temp files
