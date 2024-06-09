@@ -1,31 +1,26 @@
-import os
 import platform
-from file_formats import get_file_path
+import logging
+from utils.path_handler import get_src
+from utils.file_operations import move_files
 
-username = os.getlogin()
-sysname = platform.system()
+logging.basicConfig(
+    level=logging.INFO,
+    filename="logs/log.log",
+    filemode="a",
+    format="[%(asctime)s] - %(levelname)s - %(message)s",
+)
 
-if sysname == "Linux":
-    src_path = f"/home/{username}/Downloads"
-elif sysname == "Windows":
-    src_path = f"C:/Users/{username}/Downloads"
-elif sysname == "Darwin":
-    src_path = f"/Users/{username}/Downloads"
+logger = logging.getLogger(__name__)
 
-src_path = input(f"Enter file path ({src_path}): ") or src_path
 
-files = [f for f in os.listdir(src_path) if os.path.isfile(os.path.join(src_path, f))]
+def main():
+    sysname = platform.system()
 
-for file in files:
-    extension = file.split(".")[-1]
-    dest_path = get_file_path(extension)
-    dest = src_path + dest_path
+    src_path = get_src(sysname)
+    src_path = input(f"Enter file path ({src_path}): ") or src_path
 
-    if not os.path.exists(dest) or not os.path.isdir(dest):
-        os.makedirs(dest)
+    move_files(src_path)
 
-    src = src_path + "/" + file
-    dest += file
-    os.rename(src, dest)
 
-    print(f"{file} was successfully moved to {dest}.")
+if __name__ == "__main__":
+    main()
